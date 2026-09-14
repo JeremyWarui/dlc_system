@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.ksg, .ksg * {
+  box-sizing: border-box;
+}
+
+.ksg {
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.tnum {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.ksg-row:hover {
+  background: #FAF9F6;
+  cursor: pointer;
+}
+
+.ksg-nav:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.ksg-btn {
+  transition: opacity 0.12s, background 0.12s;
+}
+
+.ksg-btn:hover {
+  opacity: 0.86;
+}
+
+.ksg input:focus-visible,
+.ksg select:focus-visible,
+.ksg textarea:focus-visible,
+.ksg button:focus-visible,
+.ksg [tabindex]:focus-visible {
+  outline: 2px solid #9A6F26;
+  outline-offset: 1px;
+}
+
+.ksg input::placeholder,
+.ksg textarea::placeholder {
+  color: #9A9E97;
+}
+
+.drawer {
+  animation: slideIn 0.16s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(18px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ksg *, .drawer {
+    animation: none !important;
+    transition: none !important;
+  }
+}
